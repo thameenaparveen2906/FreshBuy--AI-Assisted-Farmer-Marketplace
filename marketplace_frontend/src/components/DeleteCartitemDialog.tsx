@@ -24,7 +24,7 @@ export function DeleteCartitemDialog({ itemId }: { itemId: number }) {
     setLoader(true);
     try {
       await deleteCartitem(itemId);
-      toast.success("Cartitem deleted successfully!");
+      toast.success("Cart item deleted successfully!");
       removeFromCart(itemId);
     } catch (err: unknown) {
       if (err instanceof Error) {
