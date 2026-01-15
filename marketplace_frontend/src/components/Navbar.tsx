@@ -24,18 +24,22 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useAuth } from "@/contexts/AuthContext";
 
-// ✅ Active Link Helper
-const NavLinkItem = ({
-  to,
-  children,
-  className = "",
-}: {
+interface NavLinkItemProps {
   to: string;
   children: React.ReactNode;
   className?: string;
+  onClick?: () => void; // <-- add this
+}
+
+const NavLinkItem: React.FC<NavLinkItemProps> = ({
+  to,
+  children,
+  className = "",
+  onClick, // <-- destructure
 }) => {
   const location = useLocation();
   const isActive = location.pathname === to;
+
   return (
     <Link
       to={to}
@@ -44,11 +48,14 @@ const NavLinkItem = ({
           ? "text-primary underline underline-offset-4"
           : "text-muted-foreground hover:text-foreground"
       } ${className}`}
+      onClick={onClick} // <-- forward it here
     >
       {children}
     </Link>
   );
 };
+
+export default NavLinkItem;
 
 export const Navbar = () => {
   const { cartitemCount } = useCart();
