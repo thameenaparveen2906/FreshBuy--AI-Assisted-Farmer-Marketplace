@@ -131,7 +131,7 @@ export const Navbar = () => {
                     <NavLinkItem to="/orders">Order History</NavLinkItem>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <NavLinkItem to="/admin">Admin Dashboard</NavLinkItem>
+                    <NavLinkItem to="/admin">Farmer Dashboard</NavLinkItem>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem onClick={handleLogout}>
