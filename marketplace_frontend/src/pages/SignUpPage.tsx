@@ -38,7 +38,6 @@ const SignUpPage = () => {
     handleSubmit,
     watch,
     formState: { errors },
-    reset,
   } = useForm<SignUpFormValues>();
 
   const password = watch("password");
