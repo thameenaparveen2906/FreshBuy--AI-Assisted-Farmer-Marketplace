@@ -51,11 +51,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-<<<<<<< HEAD
-     "whitenoise.middleware.WhiteNoiseMiddleware",
-=======
     'whitenoise.middleware.WhiteNoiseMiddleware',
->>>>>>> e88548dce5f3188efe54a86d50a5ab272ccc8d8b
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
