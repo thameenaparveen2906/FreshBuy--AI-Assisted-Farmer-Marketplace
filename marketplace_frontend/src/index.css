@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Backgrounds */
+    --background: 60 10% 98%;       /* Ivory-like soft off-white */
+    --foreground: 120 40% 12%;      /* Dark forest green text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 40% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 40% 12%;
+
+    /* Brand Forest Green */
+    --primary: 120 45% 35%;          /* Main forest green */
+    --primary-foreground: 0 0% 100%; /* White text on green */
+    --primary-light: 120 40% 45%;    /* Hover / highlight */
+    --primary-dark: 120 50% 25%;     /* Darker button / emphasis */
+
+    --secondary: 60 10% 96%;         /* Ivory secondary bg */
+    --secondary-foreground: 120 40% 18%;
+
+    --muted: 60 10% 96%;
+    --muted-foreground: 120 30% 40%;
+
+    --accent: 120 30% 92%;           /* Light green accents */
+    --accent-foreground: 120 40% 18%;
+
+    --success: 142 63% 42%;           /* Green success */
+    --success-foreground: 0 0% 100%;
+
+    --warning: 42 65% 48%;            /* Amber/yellow warning */
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 60 10% 91%;            /* Soft border ivory */
+    --input: 60 10% 91%;
+    --ring: 120 45% 35%;              /* Forest green ring */
+
+    /* E-commerce Brand Colors */
+    --brand-green: 120 45% 35%;
+    --brand-green-light: 120 40% 45%;
+    --brand-green-dark: 120 50% 25%;
+
+    /* Neutral Scale (Ivory / Grayish) */
+    --neutral-50: 60 12% 98%;
+    --neutral-100: 60 10% 96%;
+    --neutral-200: 60 10% 91%;
+    --neutral-300: 120 12% 84%;
+    --neutral-400: 120 11% 65%;
+    --neutral-500: 120 9% 46%;
+    --neutral-600: 120 14% 34%;
+    --neutral-700: 120 19% 27%;
+    --neutral-800: 120 28% 17%;
+    --neutral-900: 120 40% 7%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(120 14% 34% / 0.05);
+    --shadow: 0 1px 3px 0 hsl(120 14% 34% / 0.1), 0 1px 2px -1px hsl(120 14% 34% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(120 14% 34% / 0.1), 0 2px 4px -2px hsl(120 14% 34% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(120 14% 34% / 0.1), 0 4px 6px -4px hsl(120 14% 34% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(120 14% 34% / 0.1), 0 8px 10px -6px hsl(120 14% 34% / 0.1);
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-subtle: linear-gradient(135deg, hsl(var(--neutral-50)), hsl(var(--neutral-100)));
+
+    --radius: 1rem;
+
+    /* Sidebar */
+    --sidebar-background: 60 10% 96%;
+    --sidebar-foreground: 120 40% 18%;
+    --sidebar-primary: 120 45% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 120 30% 92%;
+    --sidebar-accent-foreground: 120 40% 18%;
+    --sidebar-border: 60 10% 91%;
+    --sidebar-ring: 120 45% 35%;
+  }
+
+  .dark {
+  /* Backgrounds */
+  --background: 120 30% 10%;        /* Very dark forest green */
+  --foreground: 60 10% 96%;         /* Soft ivory text */
+
+  --card: 120 30% 15%;               /* Slightly lighter card bg */
+  --card-foreground: 60 10% 96%;
+
+  --popover: 120 30% 15%;
+  --popover-foreground: 60 10% 96%;
+
+  /* Brand Forest Green */
+  --primary: 120 45% 45%;            /* Forest green CTA */
+  --primary-foreground: 0 0% 100%;   /* White text */
+  --primary-light: 120 50% 55%;      /* Hover highlight */
+  --primary-dark: 120 40% 35%;       /* Darker button / emphasis */
+  --ring: 120 45% 45%;               /* CTA focus ring */
+
+  /* Secondary / accents */
+  --secondary: 120 20% 20%;          /* Dark secondary elements */
+  --secondary-foreground: 60 10% 96%;
+
+  --muted: 120 20% 20%;
+  --muted-foreground: 120 40% 50%;
+
+  --accent: 120 30% 25%;
+  --accent-foreground: 60 10% 96%;
+
+  --success: 142 63% 42%;
+  --success-foreground: 0 0% 100%;
+
+  --warning: 42 65% 48%;
+  --warning-foreground: 0 0% 100%;
+
+  --destructive: 0 72% 52%;
+  --destructive-foreground: 0 0% 100%;
+
+  /* Borders / Inputs */
+  --border: 120 25% 25%;
+  --input: 120 25% 25%;
+
+  /* Sidebar */
+  --sidebar-background: 120 30% 12%;     /* Dark sidebar bg */
+  --sidebar-foreground: 60 10% 96%;
+  --sidebar-primary: 120 45% 45%;        /* CTA forest green */
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 120 30% 25%;
+  --sidebar-accent-foreground: 60 10% 96%;
+  --sidebar-border: 120 25% 25%;
+  --sidebar-ring: 120 45% 45%;
+}
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
