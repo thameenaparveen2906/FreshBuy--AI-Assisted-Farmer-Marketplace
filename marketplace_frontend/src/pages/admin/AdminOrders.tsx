@@ -38,7 +38,7 @@ const AdminOrders = () => {
     const [next, setNext] = useState<string | null>(null);
     const [prev, setPrev] = useState<string | null>(null);
     const [page, setPage] = useState(1);
-    // const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [updateStatusLoader, setUpdateStatusLoader] = useState(false)
   
     const pageSize = 10;
@@ -201,6 +201,12 @@ async function handleUpdateOrderStatus(orderId: number, data:{status: string}){
           </div>
         </CardHeader>
         <CardContent>
+          {loading && (
+            <div className="text-center py-6 text-muted-foreground">
+              Loading products...
+            </div>
+          )}
+
           <Table>
             <TableHeader>
               <TableRow>

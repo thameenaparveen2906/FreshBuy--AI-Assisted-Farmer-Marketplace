@@ -22,7 +22,7 @@ const AdminProducts = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const [products, setProducts] = useState<IProduct[]>([]);
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const [count, setCount] = useState(0);
   const [page, setPage] = useState(1);
@@ -131,6 +131,13 @@ const AdminProducts = () => {
           </CardHeader>
 
           <CardContent>
+            {loading && (
+              <div className="text-center py-6 text-muted-foreground">
+                Loading products...
+              </div>
+            )}
+
+
             <Table>
               <TableHeader>
                 <TableRow>
