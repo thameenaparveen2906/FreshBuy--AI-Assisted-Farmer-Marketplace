@@ -12,7 +12,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { mockProducts } from "@/data/mockData";
 import { baseURL } from "@/lib/api";
 import { adminProductSearch, getProducts } from "@/lib/services";
 import { IProduct } from "@/types/types";
@@ -86,12 +85,6 @@ const AdminProducts = () => {
 
     return () => clearTimeout(delayDebounce);
   }, [searchTerm]);
-
-  const filteredProducts = mockProducts.filter(
-    (product) =>
-      product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.category.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat("en-IN", {
