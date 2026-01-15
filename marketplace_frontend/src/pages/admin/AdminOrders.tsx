@@ -38,7 +38,7 @@ const AdminOrders = () => {
     const [next, setNext] = useState<string | null>(null);
     const [prev, setPrev] = useState<string | null>(null);
     const [page, setPage] = useState(1);
-    const [loading, setLoading] = useState(false);
+    // const [loading, setLoading] = useState(false);
     const [updateStatusLoader, setUpdateStatusLoader] = useState(false)
   
     const pageSize = 10;
