@@ -3,7 +3,6 @@ import { Minus, Plus } from "lucide-react";
 import { toast } from "sonner";
 
 import { useCart } from "@/contexts/CartContext";
-import { baseURL } from "@/lib/api";
 import {
   decreaseItemQuantity,
   formatPrice,
@@ -70,7 +69,7 @@ const CartitemCard = ({ item }: Props) => {
       className="flex items-center gap-4 py-4 border-b last:border-b-0"
     >
       <img
-        src={`${baseURL}${item.product.image}`}
+        src={item.product.image}
         alt={item.product.name}
         className="w-20 h-20 object-cover rounded-lg"
       />
