@@ -130,7 +130,7 @@ const ProductDetailPage = () => {
           <div>
             <Card className="overflow-hidden rounded-2xl shadow-md">
               <motion.img
-                src=={product.image}
+                src={product.image}
                 alt={product.name}
                 className="w-full h-96 lg:h-[500px] object-cover"
                 initial={{ opacity: 0 }}
