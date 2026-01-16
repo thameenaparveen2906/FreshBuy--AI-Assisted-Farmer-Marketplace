@@ -27,7 +27,7 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField(default=0)
     featured = models.BooleanField(default=False)
     minimumStock = models.PositiveIntegerField(default=10)
-    image = CloudinaryField("image")
+    image = CloudinaryField("image", blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
 
