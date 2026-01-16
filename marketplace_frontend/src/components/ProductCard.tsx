@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useCart } from "@/contexts/CartContext";
 import { IProduct } from "@/types/types";
-import { getImageUrl } from "@/lib/image";
 import { useProductCart } from "@/hooks/useProductCart";
 import { useEffect } from "react";
 
@@ -40,7 +39,7 @@ export const ProductCard = ({ product }: Props) => {
       <Link to={`/product/${product.slug}`}>
         <div className="relative overflow-hidden">
           <img
-            src={getImageUrl(product.image)}
+            src={`${import.meta.env.VITE_API_URL}${product.image}`}
             alt={product.name}
             className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
           />
