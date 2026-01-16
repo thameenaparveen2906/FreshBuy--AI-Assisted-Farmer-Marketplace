@@ -33,7 +33,7 @@ MAX_IMAGE_SIZE_MB = 5
 ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png']
 ALLOWED_EXTENSIONS = ['.jpg', '.jpeg', '.png']
 
-FRONTEND_URL = "http://localhost:5173"
+FRONTEND_URL = "https://freshbuy-ai-assisted-farmer-marketplace-2d5f.onrender.com"
 
 @api_view(['POST'])
 def add_product(request):
