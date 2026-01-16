@@ -12,7 +12,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { baseURL } from "@/lib/api";
 import { adminProductSearch, getProducts } from "@/lib/services";
 import { IProduct } from "@/types/types";
 import { useEffect, useState } from "react";
@@ -156,7 +155,7 @@ const AdminProducts = () => {
                     <TableCell>
                       <div className="flex items-center space-x-3">
                         <img
-                          src={`${baseURL}${product.image}`}
+                          src=={product.image}
                           alt={product.name}
                           className="w-10 h-10 rounded-lg object-cover"
                         />
