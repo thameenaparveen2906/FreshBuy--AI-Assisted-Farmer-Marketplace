@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { useCart } from "@/contexts/CartContext";
-import { baseURL } from "@/lib/api";
 import {
   createShippingAddress,
   getShippingInfo,
@@ -319,7 +318,7 @@ const CheckoutPage = () => {
                     {cart.cartitems.map((item) => (
                       <div key={item.id} className="flex items-center gap-3">
                         <img
-                          src={`${baseURL}${item.product.image}`}
+                          src={item.product.image}
                           alt={item.product.name}
                           className="w-12 h-12 object-cover rounded"
                         />
