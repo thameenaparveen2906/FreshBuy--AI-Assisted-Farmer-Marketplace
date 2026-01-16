@@ -39,7 +39,7 @@ export const ProductCard = ({ product }: Props) => {
       <Link to={`/product/${product.slug}`}>
         <div className="relative overflow-hidden">
           <img
-            src={`${import.meta.env.VITE_API_URL}${product.image}`}
+            src={product.image}
             alt={product.name}
             className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
           />
