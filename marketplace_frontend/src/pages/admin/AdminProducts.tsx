@@ -155,7 +155,7 @@ const AdminProducts = () => {
                     <TableCell>
                       <div className="flex items-center space-x-3">
                         <img
-                          src=={product.image}
+                          src={product.image}
                           alt={product.name}
                           className="w-10 h-10 rounded-lg object-cover"
                         />
