@@ -6,7 +6,6 @@ import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { useCart } from "@/contexts/CartContext";
 import { useProductCart } from "@/hooks/useProductCart";
-import { baseURL } from "@/lib/api";
 import { getProductsBySlug } from "@/lib/services";
 import { IProduct } from "@/types/types";
 import { motion } from "framer-motion";
@@ -131,7 +130,7 @@ const ProductDetailPage = () => {
           <div>
             <Card className="overflow-hidden rounded-2xl shadow-md">
               <motion.img
-                src={`${baseURL}${product.image}`}
+                src=={product.image}
                 alt={product.name}
                 className="w-full h-96 lg:h-[500px] object-cover"
                 initial={{ opacity: 0 }}
