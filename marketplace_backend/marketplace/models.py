@@ -2,6 +2,8 @@ import uuid
 from django.db import models
 from django.conf import settings
 from django.utils.text import slugify
+from cloudinary.models import CloudinaryField
+
 
 class Product(models.Model):
     CATEGORIES = (
@@ -25,7 +27,7 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField(default=0)
     featured = models.BooleanField(default=False)
     minimumStock = models.PositiveIntegerField(default=10)
-    image = models.ImageField(upload_to='product_images/', blank=True, null=True)
+    image = CloudinaryField("image")
     created_at = models.DateTimeField(auto_now_add=True)
 
 
