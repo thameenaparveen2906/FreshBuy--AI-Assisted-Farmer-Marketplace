@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useCart } from "@/contexts/CartContext";
 import { IProduct } from "@/types/types";
-import { baseURL } from "@/lib/api";
+import { getImageUrl } from "@/lib/image";
 import { useProductCart } from "@/hooks/useProductCart";
 import { useEffect } from "react";
 
