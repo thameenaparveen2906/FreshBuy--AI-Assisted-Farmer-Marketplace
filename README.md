@@ -2,7 +2,13 @@
 
 FreshBuy is a modern AI-assisted marketplace connecting farmers with buyers for fresh produce and agricultural goods. It integrates **Google Gemini AI** to automatically generate engaging product descriptions, simplifies product management for farmers, and provides a smooth buying experience with a clean React frontend and secure payment integration.
 
-🔗 **Live demo:** 
+---
+
+🔗 Live demo (Render free tier – may take a few seconds to load):
+
+https://freshbuy-ai-assisted-farmer-marketplace-2d5f.onrender.com (Frontend)
+
+https://freshbuy-ai-assisted-farmer-marketplace.onrender.com (Backend)
 
 ---
 
